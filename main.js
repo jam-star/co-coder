@@ -1,3 +1,4 @@
+
 const mapping = {
     "A" : ".-", "B" : "-...","C" : "-.-.", "D" : "-..",
     "E" : ".", "F" : "..-.", "G" : "--.", "H" : "....",
@@ -37,7 +38,7 @@ document.getElementById("convert").setAttribute('onclick','text_to_morse()');
 }
 }
 
-
+let code = "";
 
 // Function for encrypting the message 
 function text_to_morse()			
@@ -58,10 +59,52 @@ return x;
 }
 });
 
-let code = arr2.join(" ");
+code = arr2.join("");
 
 document.getElementById("output").value = code;	
 }
+function sound(){
+  for(var ch of code.split(""))
+ 
+{ 
+      if(ch=='.')
+        {
+          context = new AudioContext();
+    beep();
+        }
+      else 
+        {
+           context = new AudioContext();
+    beep2();
+        }
+      for(var i=0;i<9999;i++)
+        {for (var j=0;j<9999;j++)
+        {}}
+    }}
 
+let context = null;
 
+const beep = (freq = 520, duration = 100, vol = 30) => {
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    oscillator.connect(gain);
+    oscillator.frequency.value = freq;
+    oscillator.type = "square";
+    gain.connect(context.destination);
+    gain.gain.value = vol * 0.01;
+    oscillator.start(context.currentTime);
+    oscillator.stop(context.currentTime + duration * 0.001);
+}
+
+const beep2 = (freq = 520, duration = 300, vol = 30) => {
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    oscillator.connect(gain);
+    oscillator.frequency.value = freq;
+    oscillator.type = "square";
+    gain.connect(context.destination);
+    gain.gain.value = vol * 0.01;
+    oscillator.start(context.currentTime);
+    oscillator.stop(context.currentTime + duration * 0.001);
+}
 
