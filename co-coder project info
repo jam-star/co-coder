@@ -1,0 +1,25 @@
+# Project Name
+Text to Morse convertor
+
+## Team members
+1. Jamie Ann Jacob - https://github.com/jam-star
+2. Navami Ajay - https://github.com/Navami511
+
+## Team Id
+Team Raven
+
+## Link to product walkthrough
+[link to video]
+
+## How it Works ?
+1. Text is entered
+2. It is converted to morse code and displayed
+
+## Libraries used
+We used AudioCOntext interface and createOscillator() function
+
+## How to configure
+Instructions for setting up project
+
+## How to Run
+Instructions for running
