@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <div class="row">
         <h1 class="col-8">Text to Morse Code Converter</h1>
         <div class="col-4 d-flex justify-content-center align-items-center">
-            <button id="toggle" class="btn btn-outline-primary" onclick="toggle()">Decrypt Message</button>
+            <button id="toggle" class="btn btn-outline-primary" onclick="toggle()">Reset</button>
         </div>			
     </div>		
     
@@ -30,7 +30,9 @@
         </div>
         
         <button id="convert" class="btn btn-md px-3 btn-outline-dark" onclick="text_to_morse()">Convert to Morse Code</button>
-        
+  <div>
+  <input type="button" class="btn btn-md px-3 btn-outline-dark" value="Play" id="play" onclick="sound()">  
+    </div>
         <div>
             <b>Output</b><br>
             <textarea id="output" cols="50" rows="20"></textarea>
@@ -39,5 +41,7 @@
     </div>
     
     <script src="main.js"></script>
+
+  
 </body>
 </html>
